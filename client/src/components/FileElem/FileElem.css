@@ -1,0 +1,22 @@
+li.FileElem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 48%;
+    /* width: 100%; */
+    padding: 15px;
+    border: 2.5px solid rgb(211, 211, 211);
+    border-radius: 15px;
+    transition: .3s ease all;
+}
+.FileElem h3 {
+    font-size: 1.2rem;
+    color: #131e53;
+}
+li.FileElem:hover {
+    transition: .2s ease all;
+    box-shadow: 0 0 7px 0 #afafaf86;
+}
+li.FileElem button {
+    font-size: 1rem;
+}

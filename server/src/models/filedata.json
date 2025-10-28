@@ -1,0 +1,114 @@
+[
+  {
+    "name": "qwetry",
+    "size": 12.4,
+    "sizeMetric": "KB",
+    "creationStamp": 1740000000000,
+    "username": "john",
+    "fileID": "john-a7f6b5a4c2"
+  },
+  {
+    "name": "report1",
+    "size": 45.2,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999900000,
+    "username": "sara",
+    "fileID": "sara-b8e7c6d3e1"
+  },
+  {
+    "name": "image2",
+    "size": 102.8,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999800000,
+    "username": "mike",
+    "fileID": "mike-c9f8d7e4f2"
+  },
+  {
+    "name": "notes",
+    "size": 8.7,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999700000,
+    "username": "lisa",
+    "fileID": "lisa-d1a2b3c4d5"
+  },
+  {
+    "name": "presentation",
+    "size": 256.3,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999600000,
+    "username": "kevin",
+    "fileID": "kevin-e2b3c4d5e6"
+  },
+  {
+    "name": "summary",
+    "size": 19.5,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999500000,
+    "username": "anna",
+    "fileID": "anna-f3c4d5e6f7"
+  },
+  {
+    "name": "draft",
+    "size": 33.1,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999400000,
+    "username": "lucas",
+    "fileID": "lucas-g4d5e6f7g8"
+  },
+  {
+    "name": "invoice",
+    "size": 77.9,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999300000,
+    "username": "maria",
+    "fileID": "maria-h5e6f7g8h9"
+  },
+  {
+    "name": "contract",
+    "size": 120.0,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999200000,
+    "username": "david",
+    "fileID": "david-i6f7g8h9i0"
+  },
+  {
+    "name": "agenda",
+    "size": 15.6,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999100000,
+    "username": "nina",
+    "fileID": "nina-j7g8h9i0j1"
+  },
+  {
+    "name": "file1",
+    "size": 5.2,
+    "sizeMetric": "KB",
+    "creationStamp": 1739999000000,
+    "username": "aaa",
+    "fileID": "aaa-k1l2m3n4o5"
+  },
+  {
+    "name": "file2",
+    "size": 48.0,
+    "sizeMetric": "KB",
+    "creationStamp": 1739998900000,
+    "username": "aaa",
+    "fileID": "aaa-p6q7r8s9t0"
+  },
+  {
+    "name": "file3",
+    "size": 300.4,
+    "sizeMetric": "KB",
+    "creationStamp": 1739998800000,
+    "username": "aaa",
+    "fileID": "aaa-u1v2w3x4y5"
+  },
+  {
+    "name": "file4",
+    "size": 300.4,
+    "sizeMetric": "KB",
+    "creationStamp": 1739998800000,
+    "username": "aaa",
+    "fileID": "aaa-uwe2w3x4y5"
+  }
+]

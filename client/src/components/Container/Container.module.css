@@ -1,0 +1,13 @@
+.Container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  right: 20%;
+  bottom: 10%;
+  border: 2.5px solid rgb(204, 202, 202);
+  border-radius: 25px;
+  padding: 25px;
+}
