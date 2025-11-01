@@ -2,8 +2,9 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext/AuthContextProvider";
 
-const apiPort = 5000;
-const apiURL = `http://localhost:${apiPort}/api/v1/`;
+// const apiPort = 5000;
+// const apiURL = `http://localhost:${apiPort}/api/v1/`;
+const apiURL = "";
 
 export const api = axios.create({
   baseURL: apiURL,

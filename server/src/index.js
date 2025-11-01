@@ -28,7 +28,7 @@ app.use(express.json());
 app.use("/api/v1", userRouter);
 
 if (process.env.NODE_ENV === "production") {
-  const clientDir = path.resolve("../../client", "build");
+  const clientDir = path.resolve("../../client/build");
   console.log(clientDir);
   
   app.use(express.static(clientDir));
