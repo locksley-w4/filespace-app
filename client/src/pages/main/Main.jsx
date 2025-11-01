@@ -5,7 +5,6 @@ import MyButton from "../../components/ui/Button/MyButton";
 import Container from "../../components/Container/Container";
 import Heading from "../../components/ui/Heading/Heading";
 import { AuthContext } from "../../context/AuthContext/AuthContextProvider";
-import Modal from "../../components/ui/Modal/Modal";
 
 export default function Main() {
   const { handleLogout } = useContext(AuthContext);

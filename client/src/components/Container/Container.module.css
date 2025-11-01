@@ -12,3 +12,19 @@
   padding: 25px;
   overflow: auto;
 }
+
+@media screen and (max-width: 900px) {
+  .Container {
+    left: 15px;
+    right: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Container {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
