@@ -4,7 +4,7 @@ import { AuthContext } from "../context/AuthContext/AuthContextProvider";
 
 // const apiPort = 5000;
 // const apiURL = `http://localhost:${apiPort}/api/v1/`;
-const apiURL = "";
+const apiURL = "/api/v1";
 
 export const api = axios.create({
   baseURL: apiURL,
