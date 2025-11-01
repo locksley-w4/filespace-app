@@ -1,0 +1,83 @@
+.modalWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000045;
+  z-index: 100;
+  display: none;
+}
+.modalWrapper.active {
+  display: block;
+}
+.modalContainer {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 20%;
+  bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  border-radius: 25px;
+  z-index: 10000;
+  overflow: hidden;
+  padding: 25px;
+}
+.modalHeader {
+  width: 100%;
+  display: flex;
+  /* text-align: center; */
+  font-size: 1.3rem;
+  color: rgb(3, 33, 59);
+}
+.modalHeader h2 {
+  display: block;
+}
+button.closeBtn {
+  margin-left: auto;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  overflow: hidden;
+  transition: .5s ease-out all;
+}
+span.closeIcon {
+  font-weight: 600;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+span.closeIcon span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(115, 115, 115);
+  transform-origin: center;
+  transform: rotate(45deg);
+  border-radius: 3px;
+  transition: .5s ease-out all;
+}
+
+span.closeIcon span:nth-child(1) {
+  transform: rotate(-45deg)
+  
+}
+button.closeBtn:active span.closeIcon span {
+  width: 90%;
+}
+
+.modalBody {
+  width: 100%;
+  display: flex;
+  
+}

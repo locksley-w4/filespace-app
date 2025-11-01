@@ -23,6 +23,4 @@ export async function checkAuth(req, res, next) {
     res.status(e.status ?? 401).send({ error: e, message: e.message });
     return;
   }
-
-  res.sendStatus(401);
 }

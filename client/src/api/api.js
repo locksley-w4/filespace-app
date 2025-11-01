@@ -1,6 +1,9 @@
 import axios from "axios";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext/AuthContextProvider";
 
-const apiURL = "http://localhost:5000/api/v1/";
+const apiPort = 5000;
+const apiURL = `http://localhost:${apiPort}/api/v1/`;
 
 export const api = axios.create({
   baseURL: apiURL,
@@ -17,9 +20,9 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-api.interceptors.response.use((res) => res, handleErrorResponse);
+api.interceptors.response.use((res) => res, useErrorResponse);
 
-async function handleErrorResponse(err) {
+async function useErrorResponse(err) {
   const original_req = err.config;
 
   if (!original_req._retry && err.status === 401) {

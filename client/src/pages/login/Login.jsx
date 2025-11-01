@@ -6,7 +6,7 @@ import Heading from "../../components/ui/Heading/Heading";
 import MyButton from "../../components/ui/Button/MyButton";
 import { AuthContext } from "../../context/AuthContext/AuthContextProvider";
 import Signup from "../signup/Signup";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function Login() {
   //   const [login, setLogin] = useState("");
@@ -15,6 +15,7 @@ export default function Login() {
   const [errorMsg, setErrorMsg] = useState(null);
   const loginElem = useRef(null);
   const pwdElem = useRef(null);
+  const navigate = useNavigate()
 
   const handleSubmit = async () => {
     if (loginElem.current && pwdElem.current) {
@@ -25,6 +26,7 @@ export default function Login() {
         return;
       }
       const [error, success] = await handleLogin(login, pwd);
+      if(success) navigate("/")
       if (error) setErrorMsg(error.message);
     }
   };

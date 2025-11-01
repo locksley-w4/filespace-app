@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 // import { AuthContext } from "./AuthContext";
 import { createContext } from "react";
 import { api } from "../../api/api";
+import { useNavigate } from "react-router";
 
 export const AuthContext = createContext({ isAuth: false });
 
@@ -79,7 +80,7 @@ export default function AuthContextProvider(props) {
     }
   }
 
-  const authObj = { isAuth, handleLogin, handleLogout, handleSignup };
+  const authObj = { isAuth, setIsAuth, handleLogin, handleLogout, handleSignup };
 
   return (
     <AuthContext.Provider value={authObj}>

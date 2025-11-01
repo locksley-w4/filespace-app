@@ -6,6 +6,8 @@ import path from "path";
 
 dotenv.config();
 
+const MAX_RTOKEN_COUNT = 3; // maximum number of refresh tokens can be stored per one user
+
 export async function rotateRefreshToken(
   username,
   newRefresh,
@@ -15,13 +17,22 @@ export async function rotateRefreshToken(
   try {
     const dataPath = path.resolve("models", "refreshTokens.json");
     const data = JSON.parse(await fs.readFile(dataPath, "utf-8"));
+    const userRTokens = data[username] ?? []
     // if (!data[username]) {
     //   throw new Error(`No refresh tokens stored for user: ${username}`, {status: 500});
     // }
-    data[username] = (data[username] ?? []).filter((el) => el !== oldRefresh);
-    if (!data[username].includes(newRefresh)) {
-      data[username].push(newRefresh);
+    userRTokens.filter((el) => el !== oldRefresh);
+
+    if (!userRTokens.includes(newRefresh)) {
+      userRTokens.push(newRefresh);
     }
+
+    if (userRTokens.length >= MAX_RTOKEN_COUNT) {
+      userRTokens.splice(0, MAX_RTOKEN_COUNT % userRTokens.length);
+    }
+
+    data[username] = userRTokens;
+
     const filedata = JSON.stringify(data);
     fs.writeFile(dataPath, filedata);
   } catch (e) {

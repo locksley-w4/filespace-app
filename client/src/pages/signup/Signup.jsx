@@ -5,7 +5,7 @@ import MyInput from "../../components/ui/MyInput/MyInput";
 import Heading from "../../components/ui/Heading/Heading";
 import MyButton from "../../components/ui/Button/MyButton";
 import { AuthContext } from "../../context/AuthContext/AuthContextProvider";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function Signup() {
   //   const [login, setLogin] = useState("");
@@ -14,6 +14,7 @@ export default function Signup() {
   const [errorMsg, setErrorMsg] = useState(null);
   const usernameElem = useRef(null);
   const pwdElem = useRef(null);
+  const navigate = useNavigate()
 
   const handleSubmit = async () => {
     if (usernameElem.current && pwdElem.current) {
@@ -25,6 +26,7 @@ export default function Signup() {
       }
       
       const [error, success] = await handleSignup(username, pwd);
+      if(success) navigate("/")
       if (error) setErrorMsg(error.message);
     }
   };

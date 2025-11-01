@@ -1,8 +1,10 @@
 li.FileElem {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex: 0 0 48%;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 0 48.5%;
     /* width: 100%; */
     padding: 15px;
     border: 2.5px solid rgb(211, 211, 211);
@@ -15,8 +17,17 @@ li.FileElem {
 }
 li.FileElem:hover {
     transition: .2s ease all;
-    box-shadow: 0 0 7px 0 #afafaf86;
+    box-shadow: inset 0 0 7px 0 #afafaf86;
 }
 li.FileElem button {
     font-size: 1rem;
+    flex: 0 0 100%;
+    margin-left: auto;
+    transition: .3s all;
+    width: 35%;
+}
+li.FileElem button:hover {
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1.02rem;
 }

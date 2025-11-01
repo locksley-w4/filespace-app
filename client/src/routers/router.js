@@ -21,7 +21,7 @@ const publicRoutes = [
 const privateRoutes = [
   {
     path: "*",
-    element: <Main/>,
+    element: <Main />,
   },
 ];
 

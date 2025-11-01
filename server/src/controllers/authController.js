@@ -21,7 +21,7 @@ export const handleLogin = async (req, res) => {
     const data = await fs.readFile(dataPath, "utf-8");
     const userData = JSON.parse(data);
     const { login, password } = req.body;
-    const success = String(userData[login]) === String(password);
+    const success = String(userData[login]) === String(password);    
 
     if (!success) {
       throw new Error("Invalid credentials.", { cause: 401 });

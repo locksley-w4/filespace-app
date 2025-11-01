@@ -9,6 +9,11 @@ export default function FileElem(props) {
     setFile(props.data);
   }, [props.data]);
 
+  
+  async function handleClick (e) {
+    
+  }
+  
   if (!file) {
     return (
       <li>Data is loading...</li>
@@ -17,8 +22,9 @@ export default function FileElem(props) {
 
   return (
     <li key={file.fileID} className="FileElem" {...props}>
-      <h3 className="file_name">{file.name}</h3>
-      <MyButton>View</MyButton>
+      <h3>{file.name}</h3>
+      <span>{file.size} {file.sizeMetric}</span>
+      <MyButton onClick={handleClick}>View</MyButton>
     </li>
   );
 }
