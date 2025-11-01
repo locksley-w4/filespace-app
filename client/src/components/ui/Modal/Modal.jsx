@@ -5,6 +5,7 @@ export default function Modal({
   isVisible = false,
   setIsVisible,
   modalHeader,
+  isExtended= false,
   ...props
 }) {
   function handleModalClose(e) {
@@ -20,7 +21,7 @@ export default function Modal({
       onClick={handleModalClose}
     >
       <div
-        className={cls.modalContainer}
+        className={`${cls.modalContainer} ${isExtended ? cls.extended : ""}`}
         onClick={(e) => {
           e.stopPropagation();
         }}

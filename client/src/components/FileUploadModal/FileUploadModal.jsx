@@ -18,9 +18,9 @@ export default function FileUploadModal({ isVisible, setIsVisible, ...props }) {
 
   async function handleSubmit(e) {
     const success = await handleFileSubmit(e, file);
-    if (success){
-      alert("File was uploaded successfully.")
-      setIsVisible(false)
+    if (success) {
+      alert("File was uploaded successfully.");
+      setIsVisible(false);
     }
   }
 
@@ -48,11 +48,7 @@ export default function FileUploadModal({ isVisible, setIsVisible, ...props }) {
           />
         </label>
       </div>
-      {uploadError?.message ? (
-        <p className="errorMessage">{uploadError?.message}</p>
-      ) : (
-        ""
-      )}
+      {uploadError ? <p className="errorMessage">{uploadError}</p> : ""}
       <MyButton id="uploadFileBtn" type="submit" onClick={handleSubmit}>
         Upload
       </MyButton>

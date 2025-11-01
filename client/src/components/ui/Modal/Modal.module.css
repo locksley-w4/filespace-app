@@ -25,6 +25,12 @@
   overflow: hidden;
   padding: 25px;
 }
+.modalContainer.extended {
+ left: 10%;
+  right: 10%;
+  top: 10%;
+  bottom: 10%;
+}
 .modalHeader {
   width: 100%;
   display: flex;
@@ -43,7 +49,7 @@ button.closeBtn {
   outline: none;
   padding: 0;
   overflow: hidden;
-  transition: .5s ease-out all;
+  transition: 0.5s ease-out all;
 }
 span.closeIcon {
   font-weight: 600;
@@ -65,12 +71,11 @@ span.closeIcon span {
   transform-origin: center;
   transform: rotate(45deg);
   border-radius: 3px;
-  transition: .5s ease-out all;
+  transition: 0.5s ease-out all;
 }
 
 span.closeIcon span:nth-child(1) {
-  transform: rotate(-45deg)
-  
+  transform: rotate(-45deg);
 }
 button.closeBtn:active span.closeIcon span {
   width: 90%;
@@ -79,5 +84,6 @@ button.closeBtn:active span.closeIcon span {
 .modalBody {
   width: 100%;
   display: flex;
-  
+  flex-wrap: wrap;
+  flex: 1 1 auto;
 }

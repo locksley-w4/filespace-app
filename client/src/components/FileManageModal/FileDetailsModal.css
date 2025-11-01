@@ -1,0 +1,30 @@
+textarea#fileContents {
+  display: block;
+  flex: 0 0 100%;
+  margin-top: auto;
+  margin-bottom: 20px;
+  height: 65%;
+  appearance: none;
+  outline: none;
+  border: 2px solid rgb(207, 229, 249);
+  background-color: rgb(188, 228, 246);
+  border-radius: 10px;
+  overflow: auto;
+  padding: 10px;
+  font-weight: 500;
+}
+textarea#fileContents::-webkit-scrollbar{
+    /* background: none; */
+}
+.fileDetailsModal {
+    /* justify-content: space-around; */
+}
+.fileDetailsModal button {
+    margin-top: auto;
+}
+.fileDetailsModal button:nth-child(2) {
+    margin-left: auto;
+}
+.fileDetailsModal p{
+    flex: 0 0 100%;
+}

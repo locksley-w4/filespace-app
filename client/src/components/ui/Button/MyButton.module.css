@@ -12,3 +12,6 @@
     max-height: 65px;
     
 }
+.MyButton.red{
+    background-color: rgb(212, 7, 7);
+}

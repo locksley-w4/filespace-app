@@ -5,4 +5,10 @@
     list-style-type: none;
     gap: 15px 10px;
     width: 100%;
+    position: relative;
+    overflow: auto;
+    padding-top: 20px;
+}
+ul.fileList {
+    /* margin-top: 10px; */
 }

@@ -10,10 +10,15 @@ li.FileElem {
     border: 2.5px solid rgb(211, 211, 211);
     border-radius: 15px;
     transition: .3s ease all;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.FileElem h3 {
+.FileElem h4 {
     font-size: 1.2rem;
     color: #131e53;
+    max-width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 li.FileElem:hover {
     transition: .2s ease all;

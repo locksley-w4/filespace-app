@@ -20,8 +20,13 @@ export const handleLogin = async (req, res) => {
   try {
     const data = await fs.readFile(dataPath, "utf-8");
     const userData = JSON.parse(data);
+    if (!req.body) {
+      throw new Error("No credentials were provided.", { cause: 400 });
+    }
     const { login, password } = req.body;
-    const success = String(userData[login]) === String(password);    
+    console.log(userData[login], password);
+    
+    const success = String(userData[login]) === String(password);
 
     if (!success) {
       throw new Error("Invalid credentials.", { cause: 401 });
@@ -102,11 +107,16 @@ export const handleSignup = async (req, res) => {
     const data = await fs.readFile(dataPath, "utf-8");
     const userData = JSON.parse(data);
     const { username, password } = req.body;
-   
+
     if (userData[username]) {
-      const err = new Error("Username is taken, please choose another")
-      err.status = 409;      
-      return res.status(409).json({ message: "Username is taken, please choose another", error: err });
+      const err = new Error("Username is taken, please choose another");
+      err.status = 409;
+      return res
+        .status(409)
+        .json({
+          message: "Username is taken, please choose another",
+          error: err,
+        });
     }
 
     userData[username] = password;
