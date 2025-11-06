@@ -6,6 +6,7 @@ import sanitize from "sanitize-filename";
 const userFilesDir = path.resolve("../", "userfiles");
 const configPath = path.resolve("models", "filedata.json");
 const outPath = path.resolve("../", "userfiles");
+
 export const FILE_NOT_FOUND_ERROR = (fileID) => {
   const err = new Error(`No file found with id: ${fileID}.`);
   err.status = 404;
@@ -29,6 +30,14 @@ async function createFilesFromConfig() {
 
     await fs.mkdir(userDir, { recursive: true });
     await fs.appendFile(path.join(userDir, conf.name), "", "utf-8");
+  }
+}
+
+export async function createUserfilesDirIfNotExist() {
+  try {
+    await createDirIfNotExist(outPath);
+  } catch (err) {
+    console.error(err);
   }
 }
 
