@@ -5,6 +5,8 @@ import MyButton from "../ui/Button/MyButton";
 import { FileContext } from "../../context/FileContext/FileContextProvider";
 import LoadingScreen from "../ui/LoadingScreen";
 
+const TEXT_FILE_EXTENSIONS = [".html", ".txt", ".htm"]
+
 export default function FileDetailsModal({
   isVisible,
   setIsVisible,
@@ -26,6 +28,18 @@ export default function FileDetailsModal({
       setIsVisible(false);
       fetchFiles();
     }
+  }
+
+  function getTextareaContent(fileName = file.originalName) {
+    const fileExt = fileName.match(/\.(.+)$/)[0];
+    
+    if (!fileExt) {
+      return file.content;
+    }
+    if(TEXT_FILE_EXTENSIONS.includes(fileExt)) {
+      return file.content;
+    }
+    return "File content is not available for preview. Download to see"
   }
 
   if (!file) {
@@ -55,12 +69,12 @@ export default function FileDetailsModal({
       </MyButton>
       <MyButton
         onClick={(e) => {
-          handleDownload(e, file.fileID);
+          handleDownload(e, file.fileID, file.originalName);
         }}
       >
         Download
       </MyButton>
-      <textarea name="fileContents" id="fileContents" value={file.content} />
+      <textarea name="fileContents" id="fileContents" value={getTextareaContent()} />
     </Modal>
   );
 }

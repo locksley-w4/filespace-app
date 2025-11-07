@@ -53,3 +53,18 @@ button#uploadFileBtn {
 .fileUploadModal p {
   flex: 0 0 100%;
 }
+
+@media screen and (max-width: 475px) {
+  .fileUploadBox {
+    width: 100%;
+  }
+
+  button#uploadFileBtn {
+    /* padding: 10px 5px !important; */
+  }
+
+  .fileUploadModal input::file-selector-button {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

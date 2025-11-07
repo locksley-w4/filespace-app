@@ -1,10 +1,14 @@
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext/AuthContextProvider";
+import process from "process";
 
 // const apiPort = 5000;
 // const apiURL = `http://localhost:${apiPort}/api/v1/`;
-const apiURL = "/api/v1";
+const apiURL =
+  process.env.NODE_ENV === "production"
+    ? "/api/v1"
+    : `http://localhost:5000/api/v1/`;
 
 export const api = axios.create({
   baseURL: apiURL,

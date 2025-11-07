@@ -87,7 +87,7 @@ export default function FileContextProvider(props) {
     }
   }
 
-  async function handleDownload(e, fileID) {
+  async function handleDownload(e, fileID, fileName="file") {
     if (!fileID) {
       setDownloadError("No fileID was provided");
       return false;
@@ -98,9 +98,8 @@ export default function FileContextProvider(props) {
         `/file/myfiles/download?fileID=${fileID}`,
         { responseType: "blob" }
       );
-      console.log(response, data);
       
-      fileDownload(data, "test.html")
+      fileDownload(data, fileName)
       return true;
     } catch (error) {
       setDownloadError(error?.response?.data?.message ?? "Server error");
